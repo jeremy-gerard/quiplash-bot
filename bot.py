@@ -88,8 +88,7 @@ class QuiplashBot:
                         self._answer_last_lash()
                     else:
                         self._answer_question()
-
-                if state == "done-answering" or state == "vote":
+                if state in ["done-answering", "vote"]:
                     if self.round == 3:
                         self._vote_last_lash()
                     else:
